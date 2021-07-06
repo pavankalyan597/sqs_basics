@@ -11,6 +11,7 @@ print(msg)
 
 time.sleep(45)
 
+#deleting msg in queue
 msg_delete = client.delete_message(QueueUrl=queue['QueueUrl'], 
         ReceiptHandle=msg['Messages'][0]['ReceiptHandle'])
 
